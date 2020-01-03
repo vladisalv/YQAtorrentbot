@@ -44,10 +44,11 @@ def error(update, context):
 
 def main():
     """Start the bot."""
-    # Create the Updater and pass it your bot's token.
-    # Make sure to set use_context=True to use the new context based callbacks
-    # Post version 12 this will no longer be necessary
-    updater = Updater(os.environ['TG_TOKEN'], use_context=True)
+    TOKEN=os.environ['TG_TOKEN']
+    REQUEST_KWARGS={
+        'proxy_url': 'socks5://5.133.197.203:24382',
+    }
+    updater = Updater(TOKEN, use_context=True, request_kwargs=REQUEST_KWARGS)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
