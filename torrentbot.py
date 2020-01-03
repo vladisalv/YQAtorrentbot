@@ -46,7 +46,7 @@ def main():
     """Start the bot."""
     TOKEN=os.environ['TG_TOKEN']
     REQUEST_KWARGS={
-        'proxy_url': 'socks5://5.133.197.203:24382',
+        'proxy_url': 'socks5://167.172.185.196:1080/',
     }
     updater = Updater(TOKEN, use_context=True, request_kwargs=REQUEST_KWARGS)
 
